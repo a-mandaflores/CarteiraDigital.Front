@@ -1,0 +1,13 @@
+<div class="container mt-5 open_modal">
+    <div class="d-flex justify-content-between">
+        <div class="">
+            <button type="button" routerLink="/login" class="btn btn-primary" (click)="openClose()">Cadastrar Conta</button>
+            <button type="button" routerLink="/login" class="btn btn-outline-primary mx-3">Adicionar dinheiro</button>
+        </div>
+        <h6>SALDO: 1000</h6>
+    </div>
+    <app-card></app-card>
+
+    <app-modal [isModalVisible]="openModal" (modalClose)="openClose()"></app-modal>
+
+</div>

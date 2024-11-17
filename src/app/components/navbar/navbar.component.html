@@ -1,0 +1,48 @@
+<div class="">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid container">
+            <a class="navbar-brand fw-bold" href="#">Carteira Digital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  d-flex justify-content-md-end " id="navbarSupportedContent">
+
+
+                @if (login) {
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+                    <button [class]="buttonClasses.login" (click)="clickButtonLoginRegister()"><a class="nav-link "
+                            routerLink="/login">Login</a></button>
+
+                    <button [class]="buttonClasses.register" (click)="clickButtonLoginRegister()">
+                        <a class="nav-link fw-bold " routerLink="/register">Register</a>
+                    </button>
+
+
+                </div>
+                }@else {
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" routerLink="/">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active " aria-current="page" routerLink="/extract">Extrato</a>
+                    </li>
+
+                </ul>
+                <button type="button" routerLink="/login" (click)="getOut()"
+                    class="btn btn-outline-primary">Sair</button>
+                }
+
+
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+            </div>
+        </div>
+    </nav>
+</div>
